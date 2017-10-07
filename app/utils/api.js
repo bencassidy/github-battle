@@ -4,12 +4,12 @@ const axios = require('axios');
 // const params = '?CLIENT_ID=' + id + '&client_secret=' + secret;
 
 const getProfile = (username) => {
-  return axios.get('https://api.github.com/users/' + username + params)
+  return axios.get('https://api.github.com/users/' + username /*+ params*/)
     .then((user) => user.data)
 };
 
 const getRepos = (username) => {
-  return axios.get('https://api.github.com/users/' + username + '/repos' + /*params*/ + '&per_page=100');
+  return axios.get('https://api.github.com/users/' + username + '/repos' + '?per_page=100');
 };
 
 const getStarCount = (repos) => {
